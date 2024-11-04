@@ -9,8 +9,25 @@ app.get("/hello", (req, res) => {
 app.get("/hi", (req, res) => {
   res.send("Hi momo");
 });
+
 app.get("/test", (req, res) => {
   res.send("you test now");
+});
+
+app.get("/numbers", (req, res) => {
+  res.send("you test now");
+});
+
+app.post("/addCommet", (req, res) => {
+  res.send("comment Added ");
+});
+
+app.put("/editComment", (req, res) => {
+  res.send("comment Edited");
+});
+
+app.delete("/deleteCommet", (req, res) => {
+  res.send("comment Deleted! ");
 });
 
 app.listen(3000, () => {
