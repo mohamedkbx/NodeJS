@@ -6,8 +6,7 @@
 npm install express
 ```
 
--- create server.js file
-
+create server.js file
 import express
 
 ```bash
