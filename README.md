@@ -13,3 +13,9 @@ import express
 const server = require("express");
 const app = express();
 ```
+
+### create response with 3 kinds of params
+
+- path params
+- body params
+- query params
