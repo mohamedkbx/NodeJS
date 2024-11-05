@@ -1,8 +1,13 @@
 const server = require("express");
+const bodyParser = require("body-parser");
 
 const app = server();
-
-app.use(server.json());
+/* confige express to use body parser as a middle ware */
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(server.static("nodejs-project"));
+const cors = require("cors");
+app.use(cors());
 
 app.get("/hello", (req, res) => {
   res.json({ message: res.body.msg });
@@ -34,6 +39,12 @@ app.delete("/deleteCommet", (req, res) => {
   res.send("comment Deleted! ");
 });
 
-app.listen(3000, () => {
+app.get("/numbers", (req, res) => {
+  res.sendFile(__dirname + "./views/numbers.html");
+});
+
+const port = 3000;
+
+app.listen(port, () => {
   console.log("Server is running on port 3000");
 });
