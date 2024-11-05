@@ -19,3 +19,5 @@ const app = express();
 - path params
 - body params
 - query params
+
+## server + Project folder Hierarchy
