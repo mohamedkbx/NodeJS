@@ -43,6 +43,15 @@ app.get("/numbers", (req, res) => {
   res.sendFile(__dirname + "./views/numbers.html");
 });
 
+// Movie Example
+const data = [];
+app.post("/addMovie", addMovie);
+
+function addMovie(req, res) {
+  data.push(req.body);
+  console.log(data);
+}
+
 const port = 3000;
 
 app.listen(port, () => {
